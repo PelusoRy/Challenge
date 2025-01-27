@@ -8,7 +8,7 @@ import { Head, Link, useForm } from "@inertiajs/react";
 
 export default function Create() {
 
-    //Post: fuincion para enviar el REQUEST
+    //Post: function to send the request
     const { data, setData, post, errors, reset } = useForm({
         'nombre': '',
         'descripcion': '',

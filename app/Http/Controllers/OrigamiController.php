@@ -88,20 +88,22 @@ class OrigamiController extends Controller
         return to_route('origami.index');
     }
 
+    //Updates an image froma a link or IA generated
     public function generate_image(GenerateImageRequest $request, Origami $origami)
     {
         $data = $request->validationData();
 
         $client = OpenAI::client(env('OPEN_AI_KEY'));
 
-
+        //If the imagen link is provided save the link
         if($data['imagen'] ){
             $origami->imagen = $data['imagen'];
             $origami->update();
 
             return to_route('origami.show', $origami);
         }
-        // dd($data['promt']);
+        
+        //Get the prompt and uses it to reate an image using OpenAi
         $promt = $data['promt'];
 
         $response = $client->images()->create([

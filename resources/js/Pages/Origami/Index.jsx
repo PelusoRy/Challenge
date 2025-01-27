@@ -4,9 +4,10 @@ import { Head, Link, router } from '@inertiajs/react';
 
 export default function index({ origamis, queryParam = null }) {
     
-    //Asegurarse que queryParam tenga un objeto
+    //queryParam has an object
     queryParam = queryParam || {}
-    //Si hay un valor entonces lo enrutas si no eliminas el query
+
+    //If there's a values it routes to index, otherwise deletes teh query
     const searchFieldChanged = (name, value) => {
         if (value) {
             queryParam[name] = value
@@ -17,13 +18,14 @@ export default function index({ origamis, queryParam = null }) {
         router.get(route('origami.index',queryParam))
     }
     
-    //Si se presiono ENTER llamar la funcion searchFieldChanged con el nombre
+    //If enter pressed, call searchFieldChanged function
     const onKeyPress = (name, e) => {
         if (e.key !== 'Enter') return;
 
         searchFieldChanged(name, e.target.value);
     }
 
+    //This function makes sure that you want to delete the origami object
     const deleteOrigami = (origami) => {
         if(!window.confirm("Confirmar")){
             return;

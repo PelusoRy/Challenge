@@ -16,12 +16,14 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
+        //Defalut user por database
         User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
             'password' => '1234'
         ]);
 
+        //Default origami figures
         Origami :: factory()->create([
             'nombre' => 'Stream',
             'descripcion' => 'A kind of stream water and stream internet broadcast.',

@@ -7,11 +7,13 @@ import TextInput from "@/Components/TextInput";
 
 export default function Show({ origami }) {
 
+    //This function is used fo the request, to save data as "promt" and "imagen"
     const { data, setData, post, errors, reset } = useForm({
         'promt': '',
         'imagen': '',
     })
 
+    //On event route to generate-image with the origai object
     const onSubmit = (e) => {
         e.preventDefault();
 

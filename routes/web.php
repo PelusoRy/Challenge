@@ -38,6 +38,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+//Route to generate-image to create an image using OpenAi
 Route::post('/origami/{origami}/generate-image',[OrigamiController::class,'generate_image'])->name('origami.generate-image');
 
 require __DIR__.'/auth.php';
