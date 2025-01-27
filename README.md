@@ -11,7 +11,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project was a challenge to create a dinamic gallery
+This project was a challenge to create a dinamic gallery that displays origami kusudamas.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -82,6 +82,19 @@ npm run dev
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## User Credentials
+
+The frontend will ask for a user the credentials are
+
+user
+```sh
+test@example.com
+```
+password
+```sh
+1234
+```
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
